@@ -20,7 +20,9 @@ function printHistory(num) {
 }
 
 function getnumber(num) {
+  
   var result = document.getElementById("result");
+  // var history = getHistory();
   result.value += num;
   
   
@@ -32,11 +34,25 @@ function getnumber(num) {
   
 function getoperator(num){
   var result = document.getElementById("result");
+  
   result.value += num;
+  if(result.value.indexOf('-')){
+    console.log('hello')
+    printHistory(result.value);
   var history = getHistory();
   console.log(history)
-  printHistory(result.value);
-  // result.value=""
+  }
+  
+  
+  // var result2  = result.value.slice(0,result.value.length-1)
+  // printHistory(eval(Number(result.value.slice(0,result.value.length-1))+Number(result2)));
+  // console.log(result2)
+  // console.log(result.value)
+  // var result1 = eval(history+result.value)
+  // printHistory(result1)
+  // result.value= eval( result2 + num + result.value)
+  // result.value = ""
+  
   
 }
 function clearResult() {
@@ -52,16 +68,17 @@ function clearlastalpha() {
 
 inputUser.addEventListener("keydown", (e) =>{
   if(e.key == "Enter"){
-    console.log("hello")
+    // console.log("hello")
     getResult()
   }
 })
 
 function getResult() {
   var result = document.getElementById("result");
+  var history = getHistory();
   result.value = eval(result.value);
   printHistory(result.value);
-  result.value=""
+  // result.value=""
 }
 function clearResult1(){
   var result = document.getElementById("result");

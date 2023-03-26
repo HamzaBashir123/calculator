@@ -21,7 +21,7 @@ body{
     align-items: center;
     /* border: 2px solid green; */
     height: 100vh;
-    background-image: linear-gradient(to bottom,rgba(128, 128, 128, 0.815) ,rgba(255, 255, 0, 0.178));
+    background-image: linear-gradient(to bottom,grey ,black);
 
 }
 #history{
